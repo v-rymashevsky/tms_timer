@@ -11,6 +11,8 @@
     gap: 30px;
     justify-content: center;
     border-radius: 10px; 
+    border: 1px solid black;
+
 
     
 }
@@ -21,8 +23,17 @@
     height: 50%; 
     margin: 0 auto;
     border-radius: 50%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }
 
+
+.time { 
+
+    font-size: 30px; 
+}
 .buttons-container { 
     display:flex;
     justify-content: center;
@@ -33,6 +44,10 @@
 .button { 
     height: 50px;
     width: 45%;
+    border: 1px solid black;
+    border-radius: 10px; 
+    text-transform: uppercase;
+
 }
 
 
