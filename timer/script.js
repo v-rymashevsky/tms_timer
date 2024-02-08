@@ -4,35 +4,26 @@ const startButton = document.querySelector('.button-start');
 const pauseButton = document.querySelector('.button-pause');
 
 
-
 // event listeners
 startButton.addEventListener('click', startTimer)
 pauseButton.addEventListener('click', pauseTimer)
 
-// function reenableBtn() { 
-//     startButton.disabled = false; 
-//     pauseButton.disabled = true; 
 
-// }
-
-//functions
-
-let testID2;
+// global variables
+let timerId;
 let count = 0;
 
-function startTimer() { 
-    // time.innerText = '00 sec.';
-    testID2 = setInterval(() => {
-    count++;
-    time.innerText = `${count.toString().padStart(2, '0')} sec.`;
+
+// functions 
+function startTimer() {
+    timerId = setInterval(() => {
+        count++;
+        time.innerText = `${count.toString().padStart(2, '0')} sec.`;
     }, 1000)
-    startButton.disabled = true; 
+    startButton.disabled = true;
 }
 
-function pauseTimer () { 
-    clearInterval(testID2)
-    // testID2 = null;
-    startButton.disabled = false; 
-
-
+function pauseTimer() {
+    clearInterval(timerId);
+    startButton.disabled = false;
 }
