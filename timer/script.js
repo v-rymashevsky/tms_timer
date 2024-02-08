@@ -18,7 +18,7 @@ let count = 0;
 function startTimer() {
     timerId = setInterval(() => {
         count++;
-        time.innerText = `${count.toString().padStart(2, '0')} sec.`;
+        time.innerText = `${count.toString().padStart(2, '0')} sec`;
     }, 1000)
     startButton.disabled = true;
 }
