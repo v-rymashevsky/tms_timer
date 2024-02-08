@@ -13,11 +13,11 @@ pauseButton.addEventListener('click', pauseTimer)
 //functions
 
 function startTimer() { 
-    time.innerText = '0 sec.';
+    time.innerText = '00 sec.';
     let test = 0;
     setInterval(() => {
     test++;
-    time.innerText = `${test} sec.`;
+    time.innerText = `${test.toString().padStart(2, '0')} sec.`;
     }, 1000)
 }
 
